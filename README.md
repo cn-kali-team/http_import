@@ -3,10 +3,10 @@
 
 ```python
 import sys
-import httpimp
+import http_import
 
 sys.path.append('http://localhost:8000')
-httpimp.install_path_hook()
+http_import.install_path_hook()
 import requests
 print(dir(requests))
 ```
