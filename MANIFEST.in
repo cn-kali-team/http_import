@@ -1,1 +1,1 @@
-include README.md LICENSE
+include README.md LICENSE http_import.py setup.py __init__.py
