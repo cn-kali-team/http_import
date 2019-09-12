@@ -1,6 +1,16 @@
 # http_import
 
-> pip install http_import
+- 不推荐(不是最新的版本)
+
+```shell
+pip install http_import
+```
+
+- 推荐(最新的版本)
+
+```bash
+pip install https://github.com/cn-kali-team/http_import/archive/master.zip
+```
 
 - 远程内存加载Python模块
 
