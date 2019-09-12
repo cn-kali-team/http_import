@@ -18,7 +18,7 @@ URL = 'https://github.com/cn-kali-team/http_import'
 EMAIL = 'root@kali-team.cn'
 AUTHOR = 'Kali-Team'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

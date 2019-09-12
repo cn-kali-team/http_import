@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 # import warnings
 import sys
+import ssl
 import importlib.abc
 from importlib.machinery import ModuleSpec
 import types
@@ -23,7 +25,7 @@ def _get_links(url):
     links = set()
     try:
         # warnings.warn(f'Getting links from {url}', UserWarning)
-        u = urlopen(url)
+        u = urlopen(url, context=ssl.SSLContext())
         parser = LinkParser()
         parser.feed(u.read().decode('utf-8'))
     except Exception as e:
@@ -121,7 +123,7 @@ class UrlModuleLoader(importlib.abc.SourceLoader):
             # warnings.warn(f'loader: cached {fullname} not found', UserWarning)
             return self._source_cache[filename]
         try:
-            u = urlopen(filename)
+            u = urlopen(filename, context=ssl.SSLContext())
             source = u.read().decode('utf-8')
             # warnings.warn(f'loader: {filename} loaded', UserWarning)
             self._source_cache[filename] = source
